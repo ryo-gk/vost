@@ -5,6 +5,7 @@ specifiers:
   '@types/node': ^18.7.18
   '@vitejs/plugin-vue': ^3.1.0
   '@vueuse/core': ^9.3.0
+  dayjs: ^1.11.6
   fast-sort: ^3.2.0
   feed: ^4.2.2
   gray-matter: ^4.0.3
@@ -23,6 +24,7 @@ specifiers:
 dependencies:
   '@types/markdown-it': 12.2.3
   '@vueuse/core': 9.3.0_vue@3.2.39
+  dayjs: 1.11.6
   fast-sort: 3.2.0
   feed: 4.2.2
   gray-matter: 4.0.3
@@ -294,6 +296,10 @@ packages:
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
+
+  /dayjs/1.11.6:
+    resolution: {integrity: sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ==}
+    dev: false
 
   /defu/6.1.0:
     resolution: {integrity: sha512-pOFYRTIhoKujrmbTRhcW5lYQLBXw/dlTwfI8IguF1QCDJOcJzNH1w+YFjxqy6BAuJrClTy6MUE8q+oKJ2FLsIw==}

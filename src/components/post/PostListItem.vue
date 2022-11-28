@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import dayjs from 'dayjs'
 import { retrieve, parseToText } from '@/composables/Post'
 import AppTags from '@/components/AppTags.vue'
 import { useRouter } from 'vue-router'
@@ -36,7 +37,7 @@ function onClickTitle() {
 <template>
   <div class="PostListItem">
     <div class="date">
-      {{ publishedAt }}
+      {{ dayjs(publishedAt).format('MMM DD, YYYY') }}
     </div>
     <div class="title" @click="onClickTitle">
       {{ title }}

@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/markdown-it": "^12.2.3",
     "@vueuse/core": "^9.3.0",
+    "dayjs": "^1.11.6",
     "fast-sort": "^3.2.0",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
