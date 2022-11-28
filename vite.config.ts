@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import viteMdData from 'vite-plugin-md-data'
 import feed from './plugins/feed'
+import pages from 'vite-plugin-pages'
 import { loadBlogConfig } from './config'
 
 const BASE_URL = 'https://example.com'// TODO import from env
@@ -13,6 +14,7 @@ export default defineConfig({
     vue({
       reactivityTransform: true
     }),
+    pages(),
     viteMdData({
       path: blog.postPath
     }),

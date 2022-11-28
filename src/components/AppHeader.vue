@@ -12,7 +12,7 @@ defineProps<{
 <template>
   <div class="AppHeader">
     <div class="title">
-      Vite Blogger
+      Vost
     </div>
 
     <div class="menu">

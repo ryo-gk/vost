@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import BList from '@/components/parts/BList.vue'
 import PostListItem from '@/components/post/PostListItem.vue'
-import { getContent } from '@/composables/Content'
+import { getPosts } from '@/composables/Post'
 
-const posts = getContent()
+const posts = getPosts()
 </script>
 
 <template>

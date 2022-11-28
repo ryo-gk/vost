@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { retrieve, parseToText } from '@/composables/Content'
+import { retrieve, parseToText } from '@/composables/Post'
 import AppTags from '@/components/AppTags.vue'
+import { useRouter } from 'vue-router'
 
 const props = defineProps<{
   title: string
@@ -14,6 +15,8 @@ const props = defineProps<{
   publishedAt: Date
 }>()
 
+const router = useRouter()
+
 const description = computed(() => retrieve(parseToText(props.body), 150, '...'))
 
 const _tags = computed(() => {
@@ -24,6 +27,10 @@ const _tags = computed(() => {
     }
   })
 })
+
+function onClickTitle() {
+  router.push(`/posts/${props.slug}`)
+}
 </script>
 
 <template>
@@ -31,7 +38,7 @@ const _tags = computed(() => {
     <div class="date">
       {{ publishedAt }}
     </div>
-    <div class="title">
+    <div class="title" @click="onClickTitle">
       {{ title }}
     </div>
     <div class="description">
@@ -62,6 +69,10 @@ const _tags = computed(() => {
   margin: 8px 0;
   font-size: 26px;
   font-weight: 500;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .description {

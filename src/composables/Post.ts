@@ -1,8 +1,8 @@
 import { data } from 'virtual:vite-plugin-md-data'
 
-export type FilterBy = (data: MdContent) => boolean
+export type FilterBy = (data: Post) => boolean
 
-export interface MdContent {
+export interface Post {
   title: string
   slug: string
   body: string
@@ -11,8 +11,8 @@ export interface MdContent {
 }
 
 // TODO make it dynamic generation
-export function getContent() {
-  const contents: MdContent[] = data.map(d => ({
+export function getPosts() {
+  const posts: Post[] = data.map(d => ({
     title: d.frontmatter?.title,
     slug: d.frontmatter?.slug,
     tags: d.frontmatter?.tags,
@@ -21,7 +21,7 @@ export function getContent() {
     publishedAt: d.frontmatter?.publishedAt
   }))
 
-  return contents
+  return posts
 }
 
 export function parseToText(text: string) {

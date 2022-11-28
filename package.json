@@ -1,5 +1,5 @@
 {
-  "name": "vite-blogger",
+  "name": "vost",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -29,6 +29,7 @@
     "@vitejs/plugin-vue": "^3.1.0",
     "typescript": "^4.6.4",
     "vite": "^3.1.0",
+    "vite-plugin-pages": "^0.27.1",
     "vue-tsc": "^0.40.4"
   }
 }

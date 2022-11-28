@@ -2,6 +2,7 @@
 defineProps<{
   title: string
   description: string
+  onClickButton: () => void
 }>()
 </script>
 
@@ -15,7 +16,7 @@ defineProps<{
         <div class="description">
           {{ description }}
         </div>
-        <button class="button">
+        <button class="button" @click="onClickButton">
           Start reading
         </button>
       </div>
