@@ -3,7 +3,7 @@ slug: template
 title: Lorem ipsum
 tags:
   - Web
-  - Daily
+  - Fintech
 publishedAt: 2022-11-14
 ---
 

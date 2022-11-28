@@ -16,12 +16,12 @@
   display: flex;
 }
 
-.side-menu {
-  min-width: 200px;
+.main {
+  max-width: 800px;
 }
 
-.main {
-  max-width: 100%;
+.side-menu {
+  width: auto;
 }
 </style>
 

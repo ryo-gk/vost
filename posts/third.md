@@ -3,7 +3,7 @@ slug: template
 title: Lorem ipsum
 tags:
   - Web
-  - Daily
+  - Hobby
 publishedAt: 2022-11-14
 ---
 

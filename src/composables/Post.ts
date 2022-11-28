@@ -24,6 +24,11 @@ export function getPosts() {
   return posts
 }
 
+export function getTags() {
+  const tags = data.flatMap(d => d.frontmatter?.tags)
+  return [...new Set(tags)]
+}
+
 export function parseToText(text: string) {
   return text.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')
 }

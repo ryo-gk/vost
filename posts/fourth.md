@@ -2,7 +2,7 @@
 slug: template
 title: Lorem ipsum
 tags:
-  - Web
+  - News
   - Daily
 publishedAt: 2022-11-14
 ---

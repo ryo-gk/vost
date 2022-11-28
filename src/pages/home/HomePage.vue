@@ -4,6 +4,7 @@ import AppHeader from '@/components/AppHeader.vue'
 import AppHero from '@/components/AppHero.vue'
 import LayoutTwoColumn from '@/components/layout/LayoutTwoColumn.vue'
 import PostList from '@/components/post/PostList.vue'
+import TagList from '@/components/tag/TagList.vue'
 import { getPosts, retrieve, parseToText } from '@/composables/Post'
 import { useRouter } from 'vue-router'
 
@@ -31,11 +32,11 @@ const featuredPost = posts[0]
     />
 
     <LayoutTwoColumn class="layout">
-      <template #side-menu>
-        Side menu
-      </template>
       <template #main>
         <PostList />
+      </template>
+      <template #side-menu>
+        <TagList />
       </template>
 
     </LayoutTwoColumn>
@@ -43,7 +44,5 @@ const featuredPost = posts[0]
 </template>
 
 <style lang="postcss" scoped>
-.layout {
-  --width-side-menu: 300px;
-}
+
 </style>
