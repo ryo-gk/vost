@@ -1,15 +1,19 @@
 <script setup lang="ts">
-  import { getContent } from "../../composables/Content";
-
-  const posts = getContent([
-    d => d.status === 'published'
-  ])
+defineProps<{
+  items: any[]
+}>()
 </script>
 
 <template>
-  <ul v-if="posts.length > 0">
-    <li v-for="(post, i) in posts" :key="i">
-      <slot :post="post" />
+  <ul v-if="items.length > 0">
+    <li v-for="(item, i) in items" :key="i">
+      <slot :item="item" />
     </li>
   </ul>
 </template>
+
+<style lang="postcss" scoped>
+li {
+  list-style-type: none;
+}
+</style>

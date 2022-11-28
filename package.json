@@ -17,6 +17,7 @@
     "gray-matter": "^4.0.3",
     "markdown-creator": "^1.0.1",
     "markdown-it": "^13.0.1",
+    "normalize.css": "^8.0.1",
     "postcss-nested": "^5.0.6",
     "unconfig": "^0.3.5",
     "vite-plugin-md-data": "^1.0.0",

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-  interface Props {
-    title: string
-    body: string
-    updatedAt: Date
-  }
+export interface Props {
+  title: string
+  body: string
+  updatedAt: Date
+}
+
+defineProps<Props>()
 </script>
 
 <template>
