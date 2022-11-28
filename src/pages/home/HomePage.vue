@@ -27,7 +27,7 @@ const featuredPost = posts[0]
     <AppHero
       :title="featuredPost.title"
       :description="retrieve(parseToText(featuredPost.body), 100, '...')"
-      :onClick="() => router.push(featuredPost.slug)"
+      :onClickButton="() => router.push(featuredPost.slug)"
     />
 
     <LayoutTwoColumn class="layout">
