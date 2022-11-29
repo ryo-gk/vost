@@ -9,8 +9,6 @@ const _tags = computed(() => tags.map(tag => ({
   label: tag,
   onClick: () => {}
 })))
-
-console.log(_tags)
 </script>
 
 <template>
