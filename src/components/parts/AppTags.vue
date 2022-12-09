@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppTag, { Tag } from '@/components/AppTag.vue'
+import AppTag, { Tag } from '@/components/parts/AppTag.vue'
 //import AppTag from '@/components/AppTag.vue'
 
 const props = defineProps<{
@@ -17,3 +17,10 @@ const props = defineProps<{
     />
   </div>
 </template>
+
+<style lang="postcss" scoped>
+.AppTags {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>

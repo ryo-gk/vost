@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { getTags } from '@/composables/Post'
-import AppTags from '@/components/AppTags.vue'
+import AppTags from '@/components/parts/AppTags.vue'
 
 const tags = getTags()
 
@@ -20,10 +20,15 @@ const _tags = computed(() => tags.map(tag => ({
 
 <style lang="postcss" scoped>
 .TagList {
-  padding: 48px 16px;
+  padding: 48px 80px;
+
+  @media (min-width: 768px) {
+    padding: 48px 16px;
+  }
 }
 
 .label {
   font-size: 20px;
+  margin-bottom: 16px;
 }
 </style>

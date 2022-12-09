@@ -14,14 +14,23 @@
 <style lang="postcss" scoped>
 .LayoutTwoColumn {
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .main {
-  max-width: 800px;
+  flex: 1;
 }
 
 .side-menu {
-  width: auto;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 300px;
+  }
 }
 </style>
 

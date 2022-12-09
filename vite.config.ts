@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import dayjs from 'dayjs'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import viteMdData from 'vite-plugin-md-data'
@@ -15,6 +16,13 @@ export default defineConfig({
     }),
     viteMdData({
       path: blog.postPath,
+      callback: (data) => {
+        return data
+          .map(d => ({
+            ...d,
+            publishedAt: dayjs(d.frontmatter?.publishedAt ?? '').format('MMM DD, YYYY')
+          }))
+      },
       declaration: {
         outDir: './'
       }

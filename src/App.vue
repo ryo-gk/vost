@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HomePage from '@/pages/home/HomePage.vue'
-import AppHeader from '@/components/AppHeader.vue'
+import HomePage from '@/components/home/Home.vue'
+import AppHeader from '@/components/parts/AppHeader.vue'
 </script>
 
 <template>

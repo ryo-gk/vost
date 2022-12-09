@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import dayjs from 'dayjs'
 import { retrieve, parseToText } from '@/composables/Post'
-import AppTags from '@/components/AppTags.vue'
+import AppTags from '@/components/parts/AppTags.vue'
 import { useRouter } from 'vue-router'
 
 const props = defineProps<{
@@ -55,7 +55,6 @@ function onClickTitle() {
 .PostListItem {
   --post-accent-color: #b00020;
 
-  margin: 16px 0;
   padding: 8px 32px;
   border-left: 1px solid var(--post-accent-color);
 }

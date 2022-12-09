@@ -8,16 +8,18 @@ defineProps<Tag>()
 </script>
 
 <template>
-  <span class="AppTag" @click="onClick">
+  <div class="AppTag" @click="onClick">
     {{ label }}
-  </span>
+  </div>
 </template>
 
 <style lang="postcss" scoped>
 .AppTag {
+  margin: 4px 0;
   padding: 6px 24px;
-  border-radius: 20px;
+  line-height: 10px;
   font-size: 10px;
+  border-radius: 20px;
   color: #7d7c83;
   background-color: #f1f1f1;
   transition: background-color .25s;

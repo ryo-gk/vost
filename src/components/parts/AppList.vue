@@ -16,4 +16,8 @@ defineProps<{
 li {
   list-style-type: none;
 }
+
+li + li {
+  margin-top: var(--list-gap);
+}
 </style>
