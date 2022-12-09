@@ -14,7 +14,10 @@ export default defineConfig({
       reactivityTransform: true
     }),
     viteMdData({
-      path: blog.postPath
+      path: blog.postPath,
+      declaration: {
+        outDir: './'
+      }
     }),
     feed({
       feed: {
