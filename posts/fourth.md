@@ -1,9 +1,9 @@
 ---
 slug: template
-tags:
-  - Web
-  - Daily
 title: Lorem ipsum
+tags:
+  - News
+  - Daily
 publishedAt: 2022-11-14
 ---
 

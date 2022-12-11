@@ -1,5 +1,5 @@
 {
-  "name": "vite-blogger",
+  "name": "vost",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -12,14 +12,16 @@
   "dependencies": {
     "@types/markdown-it": "^12.2.3",
     "@vueuse/core": "^9.3.0",
+    "dayjs": "^1.11.6",
     "fast-sort": "^3.2.0",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "markdown-creator": "^1.0.1",
     "markdown-it": "^13.0.1",
+    "normalize.css": "^8.0.1",
     "postcss-nested": "^5.0.6",
     "unconfig": "^0.3.5",
-    "vite-plugin-md-data": "^1.0.0",
+    "vite-plugin-md-data": "^1.2.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.5"
   },

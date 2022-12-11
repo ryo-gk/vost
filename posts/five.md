@@ -1,9 +1,9 @@
 ---
 slug: template
+title: Lorem ipsum
 tags:
   - Web
-  - Daily
-title: Lorem ipsum
+  - Fintech
 publishedAt: 2022-11-14
 ---
 
