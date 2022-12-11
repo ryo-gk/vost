@@ -40,7 +40,8 @@ defineProps<{
 }
 
 .main {
-  width: 650px;
+  width: 70%;
+  margin: 0 auto;
   padding-top: 80px;
 }
 

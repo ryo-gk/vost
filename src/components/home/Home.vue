@@ -21,7 +21,7 @@ const featuredPost = posts[0]
 
   <LayoutTwoColumn class="layout">
     <template #main>
-      <PostList />
+      <PostList :posts="posts" />
     </template>
     <template #side-menu>
       <TagList />
@@ -31,5 +31,8 @@ const featuredPost = posts[0]
 </template>
 
 <style lang="postcss" scoped>
-
+.layout {
+  width: 70%;
+  margin: 32px auto;
+}
 </style>

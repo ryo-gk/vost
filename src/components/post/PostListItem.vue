@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import dayjs from 'dayjs'
-import { retrieve, parseToText } from '@/composables/Post'
+import { retrieve, parseToText, createTags } from '@/composables/Post'
 import AppTags from '@/components/parts/AppTags.vue'
 import { useRouter } from 'vue-router'
 
@@ -20,14 +20,7 @@ const router = useRouter()
 
 const description = computed(() => retrieve(parseToText(props.body), 150, '...'))
 
-const _tags = computed(() => {
-  return props.tags.map((tag) => {
-    return {
-      label: tag,
-      onClick: () => {}
-    }
-  })
-})
+const _tags = computed(() => createTags(props.tags))
 
 function onClickTitle() {
   router.push(`/posts/${props.slug}`)

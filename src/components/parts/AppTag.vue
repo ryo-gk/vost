@@ -8,14 +8,14 @@ defineProps<Tag>()
 </script>
 
 <template>
-  <div class="AppTag" @click="onClick">
-    {{ label }}
-  </div>
+  <li class="AppTag" @click="onClick">
+    #{{ label }}
+  </li>
 </template>
 
 <style lang="postcss" scoped>
 .AppTag {
-  margin: 4px 0;
+  margin: 4px 8px 4px 0;
   padding: 6px 24px;
   line-height: 10px;
   font-size: 10px;
@@ -28,9 +28,5 @@ defineProps<Tag>()
     background-color: #e6e6e6;
     cursor: pointer;
   }
-}
-
-.AppTag + .AppTag {
-  margin-left: 8px;
 }
 </style>

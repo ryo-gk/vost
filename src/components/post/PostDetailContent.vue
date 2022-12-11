@@ -3,22 +3,14 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import AppPage from '@/components/parts/AppPage.vue'
 import AppTags from '@/components/parts/AppTags.vue'
-import PostDetail from '@/components/post/PostDetail.vue'
-import { getPost } from '@/composables/Post'
+import { createTags, getPost } from '@/composables/Post'
 
 const route = useRoute()
 
 const slug = Array.isArray(route.params.slug) ? route.params.slug[0] : route.params.slug
-const post = getPost(slug)// ?? {}
+const post = getPost(slug)
 
-const tags = computed(() => {
-  return post?.tags.map((tag) => {
-    return {
-      label: tag,
-      onClick: () => {}
-    }
-  })
-})
+const tags = createTags(post?.tags ?? [])
 </script>
 
 <template>

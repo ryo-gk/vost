@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { getTags } from '@/composables/Post'
+import { createTags, getTags } from '@/composables/Post'
 import AppTags from '@/components/parts/AppTags.vue'
 
-const tags = getTags()
-
-const _tags = computed(() => tags.map(tag => ({
-  label: tag,
-  onClick: () => {}
-})))
+const _tags = computed(() => createTags(getTags()))
 </script>
 
 <template>

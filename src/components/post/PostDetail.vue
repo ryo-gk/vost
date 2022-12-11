@@ -21,6 +21,8 @@ import PostDetailContent from '@/components/post/PostDetailContent.vue'
 }
 
 .layout {
+  width: 70%;
+  margin: 0 auto;
   padding: 32px;
 }
 </style>

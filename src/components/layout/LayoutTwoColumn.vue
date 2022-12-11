@@ -29,7 +29,7 @@
   width: 100%;
 
   @media (min-width: 768px) {
-    width: 300px;
+    width: 350px;
   }
 }
 </style>
