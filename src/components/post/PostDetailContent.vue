@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import AppPage from '@/components/parts/AppPage.vue'
 import AppTags from '@/components/parts/AppTags.vue'
 import { createTags, getPost } from '@/composables/Post'
 
@@ -24,22 +22,21 @@ const tags = createTags(post?.tags ?? [])
     <div class="tags">
       <AppTags :tags="tags" />
     </div>
-    <div class="body" v-html="post?.body">
-    </div>
+    <div class="body" v-html="post?.body" />
   </div>
 </template>
 
 <style lang="postcss" scoped>
 .PostDetailContent {
   padding: 48px;
-  border-top: 1px solid #b00020;
-  background-color: #ffffff;
+  border-top: 1px solid var(--color-accent);
+  background-color: var(--color-white);
 }
 
 .date {
   padding-bottom: 12px;
   font-size: 12px;
-  color: #7d7c83;
+  color: var(--color-light-gray);
 }
 
 .title {

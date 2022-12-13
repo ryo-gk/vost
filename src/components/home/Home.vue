@@ -16,7 +16,7 @@ const featuredPost = posts[0]
   <AppHero
     :title="featuredPost.title"
     :description="retrieve(parseToText(featuredPost.body), 100, '...')"
-    :onClickButton="() => router.push(`posts/${featuredPost.slug}`)"
+    :on-click-button="() => router.push(`posts/${featuredPost.slug}`)"
   />
 
   <LayoutTwoColumn class="layout">
@@ -26,13 +26,11 @@ const featuredPost = posts[0]
     <template #side-menu>
       <TagList />
     </template>
-
   </LayoutTwoColumn>
 </template>
 
 <style lang="postcss" scoped>
 .layout {
-  width: 70%;
   margin: 32px auto;
 }
 </style>

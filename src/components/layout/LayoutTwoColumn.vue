@@ -1,6 +1,5 @@
 <template>
   <div class="LayoutTwoColumn">
-
     <div class="main">
       <slot name="main" />
     </div>
@@ -15,6 +14,8 @@
 .LayoutTwoColumn {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: 1280px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -23,6 +24,7 @@
 
 .main {
   flex: 1;
+  max-width: 800px;
 }
 
 .side-menu {

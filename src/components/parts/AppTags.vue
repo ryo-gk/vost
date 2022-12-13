@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import AppTag, { Tag } from '@/components/parts/AppTag.vue'
 
-const props = defineProps<{
+defineProps<{
   tags: Tag[]
 }>()
 </script>
@@ -12,7 +12,7 @@ const props = defineProps<{
       v-for="(tag, i) in tags"
       :key="i"
       :label="tag.label"
-      :onClick="tag.onClick"
+      :on-click="tag.onClick"
     />
   </ul>
 </template>

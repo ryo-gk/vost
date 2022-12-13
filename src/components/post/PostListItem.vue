@@ -46,16 +46,16 @@ function onClickTitle() {
 
 <style lang="postcss" scoped>
 .PostListItem {
-  --post-accent-color: #b00020;
+  --post-color-accent: var(--color-accent);
 
   padding: 8px 32px;
-  border-left: 1px solid var(--post-accent-color);
+  border-left: 1px solid var(--post-color-accent);
 }
 
 .date {
   font-size: 12px;
   line-height: 16px;
-  color: #7D7C83;
+  color: var(--color-light-gray);
 }
 
 .title {
@@ -71,7 +71,7 @@ function onClickTitle() {
 .description {
   font-size: 16px;
   line-height: 20px;
-  color: #7D7C83;
+  color: var(--color-light-gray);
 }
 
 .tags {

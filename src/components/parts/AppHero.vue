@@ -1,9 +1,14 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue'
+
+const props = defineProps<{
   title: string
   description: string
+  image?: string
   onClickButton: () => void
 }>()
+
+const image = computed(() => (`url(${props.image})`))
 </script>
 
 <template>
@@ -26,22 +31,27 @@ defineProps<{
 
 <style lang="postcss" scoped>
 .AppHero {
-  --hero-base-color: #f8e1e1;
-  --hero-accent-color: #b00020;
+  --color-base: var(--color-white);
+  --color-main: #f8e1e1;
+  --color-accent: #b00020;
+
+  --hero-color-main: var(--color-main);
+  --hero-color-accent: var(--color-accent);
 
   height: 320px;
-  background-color: var(--hero-base-color);
+  background-color: var(--hero-color-main);
 }
 
 .content {
   display: flex;
   height: 100%;
   padding: 0 56px;
+
+  background-image: v-bind(image);
 }
 
 .main {
-  width: 70%;
-  margin: 0 auto;
+  max-width: 800px;
   padding-top: 80px;
 }
 
@@ -50,7 +60,7 @@ defineProps<{
   font-size: 36px;
   font-weight: 400;
   letter-spacing: 0;
-  color: var(--hero-accent-color);
+  color: var(--hero-color-accent);
 
   @media (min-width: 768px) {
     line-height: 60px;
@@ -63,7 +73,7 @@ defineProps<{
   padding-bottom: 16px;
   font-size: 20px;
   line-height: 20px;
-  color: var(--hero-accent-color);
+  color: var(--hero-color-accent);
 
   @media (min-width: 512px) {
     font-size: 24px;
@@ -75,8 +85,8 @@ defineProps<{
   height: 40px;
   padding: 0 48px;
   border-radius: 28px;
-  color: #ffffff;
-  background-color: var(--hero-accent-color);
+  color: var(--color-white);
+  background-color: var(--hero-color-accent);
   opacity: 1;
   transition: opacity .5s;
 

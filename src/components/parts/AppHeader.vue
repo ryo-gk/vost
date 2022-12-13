@@ -16,14 +16,12 @@ defineProps<{
     </div>
 
     <div class="menu">
-      <ul class="items" v-if="menu?.length > 0">
-        <li v-for="(item, i) in menu" :key="i" class="item">
-        </li>
+      <ul v-if="menu?.length > 0" class="items">
+        <li v-for="(item, i) in menu" :key="i" class="item" />
       </ul>
     </div>
   </div>
-  <div class="dummy">
-  </div>
+  <div class="dummy" />
 </template>
 
 <style lang="postcss" scoped>
@@ -37,8 +35,9 @@ defineProps<{
   width: 100%;
   padding-left: 40px;
   border-bottom: 1px solid rgba(176, 0, 32, 0.3);
-  color: #B00020;
-  background-color: #ffffff;
+  color: var(--color-accent);
+  background-color: var(--color-white);
+  z-index: var(--z-index-header);
 }
 
 .AppHeader,

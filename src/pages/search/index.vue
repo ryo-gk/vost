@@ -2,36 +2,15 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import AppPage from '@/components/parts/AppPage.vue'
-import LayoutTwoColumn from '@/components/layout/LayoutTwoColumn.vue'
-import PostList from '@/components/post/PostList.vue'
-import TagList from '@/components/tag/TagList.vue'
-import { getTagFilteredPost } from '@/composables/Post'
+import Search from '@/components/search/Search.vue'
 
 const route = useRoute()
 const tag = computed(() => route.query.tag ?? '')
-const title = computed(() => `The posts about ${tag}`)
-const posts = computed(() => getTagFilteredPost(tag.value as any))
+const title = computed(() => `The posts about ${tag.value}`)
 </script>
 
 <template>
   <AppPage :title="title">
-    <LayoutTwoColumn class="layout">
-      <template #main>
-        <div class="search-keyword">
-          #{{ tag }}
-        </div>
-        <PostList :posts="posts" />
-      </template>
-      <template #side-menu>
-        <TagList />
-      </template>
-    </LayoutTwoColumn>
+    <Search />
   </AppPage>
 </template>
-
-<style lang="postcss" scoped>
-.search-keyword {
-  margin: 36px 56px 0;
-  font-size: 32px;
-}
-</style>

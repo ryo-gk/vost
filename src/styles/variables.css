@@ -1,0 +1,14 @@
+/* color */
+:root {
+  --color-white: #ffffff;
+  --color-light-gray: #7d7c83;
+
+  --color-base: var(--color-white);
+  --color-main: #f8e1e1;
+  --color-accent: #b00020;
+}
+
+/* z-index */
+:root {
+  --z-index-header: 10;
+}

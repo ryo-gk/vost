@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import LayoutTwoColumn from '@/components/layout/LayoutTwoColumn.vue'
 import PostDetailContent from '@/components/post/PostDetailContent.vue'
+import TagList from '@/components/tag/TagList.vue'
 </script>
 
 <template>
@@ -10,6 +11,9 @@ import PostDetailContent from '@/components/post/PostDetailContent.vue'
         <PostDetailContent />
       </template>
       <template #side-menu>
+        <div class="side-menu">
+          <TagList />
+        </div>
       </template>
     </LayoutTwoColumn>
   </div>
@@ -17,12 +21,17 @@ import PostDetailContent from '@/components/post/PostDetailContent.vue'
 
 <style lang="postcss" scoped>
 .PostDetail {
-  background-color: #f8e1e1;
+  background-color: var(--color-main);
 }
 
 .layout {
-  width: 70%;
   margin: 0 auto;
   padding: 32px;
+}
+
+.side-menu {
+  margin: 0 16px;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-accent);
 }
 </style>
