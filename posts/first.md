@@ -1,9 +1,9 @@
 ---
-slug: template
+slug: first
+title: First post
 tags:
   - Web
   - Daily
-title: Lorem ipsum
 publishedAt: 2022-11-14
 ---
 

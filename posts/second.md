@@ -1,6 +1,6 @@
 ---
-slug: template
-title: Lorem ipsum
+slug: second
+title: Second post
 tags:
   - Web
   - Service

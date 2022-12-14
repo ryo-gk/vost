@@ -1,6 +1,6 @@
 ---
-slug: template
-title: Lorem ipsum
+slug: fourth
+title: Fourth post 
 tags:
   - News
   - Daily

@@ -1,6 +1,6 @@
 ---
-slug: template
-title: Lorem ipsum
+slug: third
+title: Third post
 tags:
   - Web
   - Hobby

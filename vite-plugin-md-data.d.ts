@@ -4,8 +4,8 @@ declare module "virtual:vite-plugin-md-data" {
     content: string
     frontmatter: {
       slug: string
-      tags: string[]
       title: string
+      tags: string[]
       publishedAt: Date
     }
     publishedAt: string

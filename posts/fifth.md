@@ -1,6 +1,6 @@
 ---
-slug: template
-title: Lorem ipsum
+slug: fifth
+title: Fifth post
 tags:
   - Web
   - Fintech
