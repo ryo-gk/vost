@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import viteMdData from 'vite-plugin-md-data'
 import feed from './plugins/feed'
 import { loadBlogConfig } from './config'
+import { isPublished } from './filters'
 
 const BASE_URL = 'https://example.com'// TODO import from env
 const blog = await loadBlogConfig()
@@ -18,6 +19,7 @@ export default defineConfig({
       path: blog.postPath,
       callback: (data) => {
         return data
+          .filter(isPublished)
           .map(d => ({
             ...d,
             publishedAt: dayjs(d.frontmatter?.publishedAt ?? '').format('MMM DD, YYYY')

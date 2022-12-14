@@ -4,11 +4,11 @@ import { computed } from 'vue'
 const props = defineProps<{
   title: string
   description: string
-  image?: string
+  backgroundImage?: string
   onClickButton: () => void
 }>()
 
-const image = computed(() => (`url(${props.image})`))
+const image = computed(() => (`url(${props.backgroundImage})`))
 </script>
 
 <template>
@@ -31,10 +31,6 @@ const image = computed(() => (`url(${props.image})`))
 
 <style lang="postcss" scoped>
 .AppHero {
-  --color-base: var(--color-white);
-  --color-main: #f8e1e1;
-  --color-accent: #b00020;
-
   --hero-color-main: var(--color-main);
   --hero-color-accent: var(--color-accent);
 
@@ -48,6 +44,9 @@ const image = computed(() => (`url(${props.image})`))
   padding: 0 56px;
 
   background-image: v-bind(image);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main {

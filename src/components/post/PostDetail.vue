@@ -30,8 +30,12 @@ import TagList from '@/components/tag/TagList.vue'
 }
 
 .side-menu {
-  margin: 0 16px;
+  margin: 32px 0;
   background-color: var(--color-white);
-  border-top: 1px solid var(--color-accent);
+
+  @media (min-width: 768px) {
+    margin: 0 16px;
+    border-top: 1px solid var(--color-accent);
+  }
 }
 </style>

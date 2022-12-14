@@ -15,7 +15,7 @@ const _tags = computed(() => createTags(getTags()))
 
 <style lang="postcss" scoped>
 .TagList {
-  padding: 48px 80px;
+  padding: 36px 48px;
 
   @media (min-width: 768px) {
     padding: 48px 16px;

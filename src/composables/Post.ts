@@ -1,4 +1,3 @@
-import day, { Dayjs } from 'dayjs'
 import { data } from 'virtual:vite-plugin-md-data'
 import { useRouter } from 'vue-router'
 
@@ -8,7 +7,7 @@ export type Frontmatter = typeof data[number]['frontmatter']
 export interface Post extends Omit<Frontmatter, 'publishedAt'> {
   path: string
   body: string
-  publishedAt: Dayjs
+  publishedAt: string
 }
 
 export function getPost(slug: string): Post | null {
@@ -22,7 +21,7 @@ export function getPosts() {
     tags: d.frontmatter?.tags ?? [],
     body: d.content ?? '',
     path: d.path ?? '',
-    publishedAt: day(d.publishedAt ?? '')
+    publishedAt: d.publishedAt ?? ''
   }))
 
   return posts

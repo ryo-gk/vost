@@ -34,7 +34,7 @@ defineProps<{
   align-items: center;
   width: 100%;
   padding-left: 40px;
-  border-bottom: 1px solid rgba(176, 0, 32, 0.3);
+  border-bottom: 1px solid var(--color-accent--lighten-2);
   color: var(--color-accent);
   background-color: var(--color-white);
   z-index: var(--z-index-header);

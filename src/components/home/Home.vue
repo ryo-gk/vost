@@ -16,6 +16,7 @@ const featuredPost = posts[0]
   <AppHero
     :title="featuredPost.title"
     :description="retrieve(parseToText(featuredPost.body), 100, '...')"
+    background-image="/img/hero-image_nick-brunner.jpg"
     :on-click-button="() => router.push(`posts/${featuredPost.slug}`)"
   />
 
