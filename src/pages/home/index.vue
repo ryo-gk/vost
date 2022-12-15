@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import AppPage from '@/components/parts/AppPage.vue'
-import Home from '@/components/home/Home.vue'
+import HomeIndex from '@/components/app/home/HomeIndex.vue'
 </script>
 
 <template>
-  <AppPage title="Home">
-    <Home />
-  </AppPage>
+  <HomeIndex />
 </template>

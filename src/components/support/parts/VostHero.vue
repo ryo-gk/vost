@@ -12,7 +12,7 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 </script>
 
 <template>
-  <div class="AppHero">
+  <div class="VostHero">
     <div class="content">
       <div class="main">
         <div class="title">
@@ -30,7 +30,7 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 </template>
 
 <style lang="postcss" scoped>
-.AppHero {
+.VostHero {
   --hero-color-main: var(--color-main);
   --hero-color-accent: var(--color-accent);
 

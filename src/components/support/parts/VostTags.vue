@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppTag, { Tag } from '@/components/parts/AppTag.vue'
+import VostTag, { Tag } from '@/components/support/parts/VostTag.vue'
 
 defineProps<{
   tags: Tag[]
@@ -7,8 +7,8 @@ defineProps<{
 </script>
 
 <template>
-  <ul class="AppTags">
-    <AppTag
+  <ul class="VostTags">
+    <VostTag
       v-for="(tag, i) in tags"
       :key="i"
       :label="tag.label"
@@ -18,7 +18,7 @@ defineProps<{
 </template>
 
 <style lang="postcss" scoped>
-.AppTags {
+.VostTags {
   display: flex;
   flex-wrap: wrap;
 }

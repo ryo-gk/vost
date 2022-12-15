@@ -22,6 +22,6 @@
       "node"
     ]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "bin/**/*.ts", "*.d.ts", "bin/index.js"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "bin/**/*.ts", "plugins/client/**.*.ts", "*.d.ts", "bin/index.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

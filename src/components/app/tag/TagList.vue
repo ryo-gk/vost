@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { createTags, getTags } from '@/composables/Post'
-import AppTags from '@/components/parts/AppTags.vue'
-
-const _tags = computed(() => createTags(getTags()))
+import PostTags from '@/components/app/post/PostTags.vue'
 </script>
 
 <template>
   <div class="TagList">
     <h2 class="label">Tags</h2>
-    <AppTags :tags="_tags" />
+    <PostTags />
   </div>
 </template>
 

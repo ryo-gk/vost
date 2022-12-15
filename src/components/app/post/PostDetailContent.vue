@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import AppTags from '@/components/parts/AppTags.vue'
+import VostTags from '@/components/support/parts/VostTags.vue'
 import { createTags, getPost } from '@/composables/Post'
 
 const route = useRoute()
@@ -20,7 +20,7 @@ const tags = createTags(post?.tags ?? [])
       {{ post?.title ?? '' }}
     </div>
     <div class="tags">
-      <AppTags :tags="tags" />
+      <VostTags :tags="tags" />
     </div>
     <div class="body" v-html="post?.body" />
   </div>

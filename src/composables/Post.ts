@@ -40,7 +40,7 @@ export function createTags(labels: string[]) {
   })
 }
 
-export function getTags() {
+export function getAllTags() {
   const tags = data.flatMap(d => d.frontmatter?.tags)
   return [...new Set(tags)]
 }

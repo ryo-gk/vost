@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AppList from '@/components/parts/AppList.vue'
-import PostListItem from '@/components/post/PostListItem.vue'
+import VostList from '@/components/support/parts/VostList.vue'
+import PostListItem from '@/components/app/post/PostListItem.vue'
 import { Post } from '@/composables/Post'
 
 defineProps<{
@@ -9,11 +9,11 @@ defineProps<{
 </script>
 
 <template>
-  <AppList :items="posts" class="PostList">
+  <VostList :items="posts" class="PostList">
     <template #default="{ item: post }">
       <PostListItem v-bind="post" />
     </template>
-  </AppList>
+  </VostList>
 </template>
 
 <style lang="postcss" scoped>

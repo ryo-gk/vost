@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import viteMdData from 'vite-plugin-md-data'
-import feed from './plugins/feed'
+import feed from './plugins/server/feed'
 import { loadBlogConfig } from './config'
 import { isPublished } from './filters'
 

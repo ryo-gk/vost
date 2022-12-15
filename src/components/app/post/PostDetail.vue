@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import LayoutTwoColumn from '@/components/layout/LayoutTwoColumn.vue'
-import PostDetailContent from '@/components/post/PostDetailContent.vue'
-import TagList from '@/components/tag/TagList.vue'
+import PostDetailContent from '@/components/app/post/PostDetailContent.vue'
+import TagList from '@/components/app/tag/TagList.vue'
 </script>
 
 <template>

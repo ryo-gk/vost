@@ -8,13 +8,13 @@ defineProps<Tag>()
 </script>
 
 <template>
-  <li class="AppTag" @click="onClick">
+  <li class="VostTag" @click="onClick">
     #{{ label }}
   </li>
 </template>
 
 <style lang="postcss" scoped>
-.AppTag {
+.VostTag {
   margin: 4px 8px 4px 0;
   padding: 6px 24px;
   line-height: 10px;

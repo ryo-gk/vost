@@ -5,7 +5,7 @@ import MarkdownIt from 'markdown-it'
 import matter from 'gray-matter'
 import { Feed } from 'feed'
 import { FeedOptions, Item } from 'feed/lib/typings'
-import { loadBlogConfig } from '../config'
+import { loadBlogConfig } from '../../config'
 
 interface MdData {
   path: string

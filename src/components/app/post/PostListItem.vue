@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import dayjs from 'dayjs'
-import { retrieve, parseToText, createTags } from '@/composables/Post'
-import AppTags from '@/components/parts/AppTags.vue'
+import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { retrieve, parseToText, createTags } from '@/composables/Post'
+import VostTags from '@/components/support/parts/VostTags.vue'
 
 const props = defineProps<{
   title: string
@@ -39,7 +39,7 @@ function onClickTitle() {
       {{ description }}
     </div>
     <div class="tags">
-      <AppTags :tags="_tags" />
+      <VostTags :tags="_tags" />
     </div>
   </div>
 </template>

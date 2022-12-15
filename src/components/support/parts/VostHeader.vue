@@ -5,14 +5,15 @@ export interface MenuItem {
 }
 
 defineProps<{
+  title: string
   menu?: MenuItem[]
 }>()
 </script>
 
 <template>
-  <div class="AppHeader">
+  <div class="VostHeader">
     <div class="title">
-      <a href="/">Vost</a>
+      <a href="/">{{ title }}</a>
     </div>
 
     <div class="menu">
@@ -25,7 +26,7 @@ defineProps<{
 </template>
 
 <style lang="postcss" scoped>
-.AppHeader {
+.VostHeader {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,7 +41,7 @@ defineProps<{
   z-index: var(--z-index-header);
 }
 
-.AppHeader,
+.VostHeader,
 .dummy {
   height: 80px;
 }
