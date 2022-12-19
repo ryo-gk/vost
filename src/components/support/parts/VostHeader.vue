@@ -17,7 +17,7 @@ defineProps<{
     </div>
 
     <div class="menu">
-      <ul v-if="menu?.length > 0" class="items">
+      <ul v-if="menu && menu?.length > 0" class="items">
         <li v-for="(item, i) in menu" :key="i" class="item" />
       </ul>
     </div>

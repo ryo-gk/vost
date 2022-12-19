@@ -31,11 +31,12 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 
 <style lang="postcss" scoped>
 .VostHero {
-  --hero-color-main: var(--color-main);
+  --hero-color-background: var(--color-main);
   --hero-color-accent: var(--color-accent);
+  --hero-color-accent--hover: var(--color-accent--lighten-1);
 
   height: 320px;
-  background-color: var(--hero-color-main);
+  background-color: var(--hero-color-background);
 }
 
 .content {
@@ -86,11 +87,10 @@ const image = computed(() => (`url(${props.backgroundImage})`))
   border-radius: 28px;
   color: var(--color-white);
   background-color: var(--hero-color-accent);
-  opacity: 1;
-  transition: opacity .5s;
+  transition: background-color .5s;
 
   &:hover {
-    opacity: .7;
+    background-color: var(--hero-color-accent--hover);
   }
 }
 </style>

@@ -7,12 +7,12 @@
   --color-main: #f4f6f6;
   --color-accent: #121212;
 
-  --color-accent--lighten-1: #898989;
-  --color-accent--lighten-2: #c4c4c4;
-  --color-accent--lighten-3: #f1f1f1;
-  --color-accent--darken-1: #101010;
-  --color-accent--darken-2: #0f0f0f;
-  --color-accent--darken-3: #0e0e0e;
+  --color-accent--lighten-1: #3f3f3f;
+  --color-accent--lighten-2: #4e4e4e;
+  --color-accent--lighten-3: #5d5d5d;
+  --color-accent--darken-1: #0e0e0e;
+  --color-accent--darken-2: #090909;
+  --color-accent--darken-3: #000000;
 }
 
 /* z-index */
