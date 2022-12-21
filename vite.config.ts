@@ -1,14 +1,13 @@
 import { defineConfig } from 'vite'
-import dayjs from 'dayjs'
 import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 import viteMdData from 'vite-plugin-md-data'
 import feed from './plugins/server/feed'
 import { loadBlogConfig } from './config'
-import { isPublished } from './filters'
+import { isPublished, withPublishedAt, compareByPublishedAt } from './callbacks'
+import { virtual } from './plugins/server/virtual'
 
-const BASE_URL = 'https://example.com'// TODO import from env
-const blog = await loadBlogConfig()
+const blogConfig = await loadBlogConfig()
 
 export default defineConfig({
   plugins: [
@@ -16,32 +15,34 @@ export default defineConfig({
       reactivityTransform: true
     }),
     viteMdData({
-      path: blog.postPath,
+      path: blogConfig.postPath,
       callback: (data) => {
         return data
           .filter(isPublished)
-          .map(d => ({
-            ...d,
-            publishedAt: dayjs(d.frontmatter?.publishedAt ?? '').format('MMM DD, YYYY')
-          }))
+          .map(withPublishedAt)
+          .sort(compareByPublishedAt)
       },
       declaration: {
         outDir: './'
       }
     }),
+    virtual({
+      //'virtual:config': blogConfig
+      'virtual:config': `export const config = ${JSON.stringify(blogConfig)}`
+    }),
     feed({
       feed: {
-        id: blog.name,
-        title: blog.name,
-        copyright: 'ryo_gk',
-        description: blog?.description ?? '',
-        link: BASE_URL,
-        language: blog?.lang ?? 'ja'
+        id: blogConfig.name,
+        title: blogConfig.name,
+        copyright: blogConfig.copyright ?? undefined,
+        description: blogConfig?.description ?? undefined,
+        link: blogConfig.baseUrl,
+        language: blogConfig?.lang ?? 'ja'
       },
       items: (post) => {
         return {
           title: post.frontmatter.title,
-          link: BASE_URL + post.path,
+          link: blogConfig.baseUrl + post.path,
           date: new Date(post.frontmatter.publishedAt),
           content: post.content
         }

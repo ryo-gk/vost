@@ -2,9 +2,11 @@ import { loadConfig } from 'unconfig'
 
 export interface BlogConfig {
   name: string
+  baseUrl: string
   postPath: string
   description?: string
-  lang?: string
+  image?: string
+  copyright?: string
 }
 
 export async function loadBlogConfig(): Promise<BlogConfig> {

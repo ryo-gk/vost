@@ -1,5 +1,6 @@
 {
   "name": "Vost",
   "postPath": "./posts",
-  "description": "The blog created by Vost."
+  "description": "The blog created by Vost.",
+  "copyright": "ryo_gk"
 }

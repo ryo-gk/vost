@@ -1,14 +1,35 @@
 <script setup lang="ts">
-import { useTitle } from '@vueuse/core'
-import { useSiteConfig } from '@/composables/Site'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { config } from 'virtual:config'
+import { useOGP } from '@/composables/Head'
+import { useHead } from '@vueuse/head'
 
 const props = defineProps<{
-  title?: string
+  title: string,
+  description?: string
+  image?: string
+  type?: 'website' | 'blog' | 'article'
 }>()
 
-const site = useSiteConfig()
+const route = useRoute()
 
-useTitle(props.title ? `${props.title} | ${site.name}` : site.name)
+const title = computed(() => props.title ? `${props.title} | ${config.name}` : config.name)
+
+const ogp = useOGP({
+  siteName: config.name,
+  title: title.value,
+  description: props.description ?? config.description,
+  url: location.origin + route.fullPath,
+  image: props.image ?? config.image,
+  type: props.type ?? 'blog'
+})
+
+
+const head = useHead({
+  ...ogp,
+  title
+})
 </script>
 
 <template>
