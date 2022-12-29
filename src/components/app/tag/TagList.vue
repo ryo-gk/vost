@@ -11,7 +11,7 @@ import PostTags from '@/components/app/post/PostTags.vue'
 
 <style lang="postcss" scoped>
 .TagList {
-  padding: 36px 48px;
+  padding: 36px 48px 96px;
 
   @media (min-width: 768px) {
     padding: 48px 16px;

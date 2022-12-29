@@ -29,8 +29,11 @@ const tags = createTags(post?.tags ?? [])
 <style lang="postcss" scoped>
 .PostDetailContent {
   padding: 48px;
-  border-top: 1px solid var(--color-accent);
   background-color: var(--color-white);
+
+  @media (min-width: 768px) {
+    border-top: 1px solid var(--color-accent);
+  }
 }
 
 .date {
@@ -41,6 +44,8 @@ const tags = createTags(post?.tags ?? [])
 
 .title {
   font-size: 36px;
+  font-weight: 600;
+  font-family: var(--font-family--post-title);
 }
 
 .tags {
@@ -48,21 +53,29 @@ const tags = createTags(post?.tags ?? [])
 }
 
 .body {
-  line-height: 30px;
+  line-height: 28px;
   margin-top: 24px;
-  letter-spacing: .4px;
-  font-family: "Helvetica";
-  font-size: 20px;
+  letter-spacing: .3px;
+  font-size: var(--font-size--detail-content_body);
   font-weight: 300;
+  font-family: var(--font-family--content);
 
   :deep(h1) {
-      font-size: 28px;
-      margin: 24px 0 8px;
+    margin: 16px 0 0;
+    font-size: var(--font-size--detail-content_h1);
+    font-weight: 700;
+    font-family: var(--font-family--post-title);
   }
 
   :deep(h2) {
-      font-size: 24px;
-      margin: 16px 0 4px;
+    margin: 16px 0 0;
+    font-size: var(--font-size--detail-content_h2);
+    font-weight: 700;
+    font-family: var(--font-family--post-title);
+  }
+
+  @media (min-width: 768px) {
+
   }
 }
 </style>

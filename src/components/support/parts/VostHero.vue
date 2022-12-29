@@ -21,9 +21,11 @@ const image = computed(() => (`url(${props.backgroundImage})`))
         <div class="description">
           {{ description }}
         </div>
-        <button class="button" @click="onClickButton">
-          Start reading
-        </button>
+        <div class="actions">
+          <button class="button" @click="onClickButton">
+            Start reading
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -42,12 +44,16 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 .content {
   display: flex;
   height: 100%;
-  padding: 0 56px;
+  padding: 0 32px;
 
   background-image: v-bind(image);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-width: 768px) {
+    padding: 0 56px;
+  }
 }
 
 .main {
@@ -56,10 +62,11 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 }
 
 .title {
-  line-height: 40px;
-  font-size: 36px;
-  font-weight: 400;
+  line-height: 36px;
   letter-spacing: 0;
+  font-size: 36px;
+  font-weight: 600;
+  font-family: var(--font-family--post-title);
   color: var(--hero-color-accent);
 
   @media (min-width: 768px) {
@@ -69,15 +76,25 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 }
 
 .description {
-  padding-top: 16px;
+  padding-top: 12px;
   padding-bottom: 16px;
-  font-size: 20px;
   line-height: 20px;
   color: var(--hero-color-accent);
+  font-size: 20px;
+  font-family: var(--font-family--content);
 
   @media (min-width: 512px) {
-    font-size: 24px;
     line-height: 32px;
+    font-size: 24px;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 512px) {
+    justify-content: flex-start;
   }
 }
 

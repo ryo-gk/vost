@@ -2,6 +2,7 @@
 :root {
   --color-white: #ffffff;
   --color-light-gray: #7d7c83;
+  --color-light-black: #333333;
 
   --color-base: var(--color-white);
   --color-main: #f4f6f6;
@@ -13,6 +14,16 @@
   --color-accent--darken-1: #0e0e0e;
   --color-accent--darken-2: #090909;
   --color-accent--darken-3: #000000;
+}
+
+/* font */
+:root {
+  --font-family--base: "Hiragino Sans";
+  --font-family--content: "YuMincho", "Yu Mincho", "Hiragino Sans";
+  --font-family--post-title: "Hiragino Sans";
+  --font-size--detail-content_body: 16px;
+  --font-size--detail-content_h1: 20px;
+  --font-size--detail-content_h2: 18px;
 }
 
 /* z-index */

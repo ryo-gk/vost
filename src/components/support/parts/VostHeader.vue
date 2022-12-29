@@ -48,6 +48,8 @@ defineProps<{
 
 .title {
   font-size: 32px;
+  font-weight: 600;
+  font-family: var(--font-family--post-title);
 }
 
 .items {

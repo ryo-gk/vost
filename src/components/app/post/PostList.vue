@@ -19,8 +19,12 @@ defineProps<{
 <style lang="postcss" scoped>
 .PostList {
   --list-gap: 16px;
+  padding: 32px;
 
-  padding: 32px 56px;
+
+  @media (min-width: 768px) {
+    padding: 32px 56px;
+  }
 }
 
 .PostList + .PostList {

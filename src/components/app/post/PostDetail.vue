@@ -25,7 +25,12 @@ import TagList from '@/components/app/tag/TagList.vue'
 
 .layout {
   margin: 0 auto;
-  padding: 32px;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    border-top: none;
+    padding: 32px;
+  }
 }
 
 .side-menu {
