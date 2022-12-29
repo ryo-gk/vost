@@ -23,4 +23,6 @@ Run the below, and open http://localhost:5173
 
 Here, you can see the posts which are on the `/posts` directory is displayed as blog post.
 
+### Deployment
+Follow the [Vite's document](https://vitejs.dev/guide/static-deploy.html).
 
