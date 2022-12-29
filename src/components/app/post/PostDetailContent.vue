@@ -55,16 +55,14 @@ const tags = createTags(post?.tags ?? [])
   font-size: 20px;
   font-weight: 300;
 
-  :deep {
-    h1 {
+  :deep(h1) {
       font-size: 28px;
       margin: 24px 0 8px;
-    }
+  }
 
-    h2 {
+  :deep(h2) {
       font-size: 24px;
       margin: 16px 0 4px;
-    }
   }
 }
 </style>
