@@ -26,7 +26,7 @@ const ogp = useOGP({
 })
 
 
-const head = useHead({
+useHead({
   ...ogp,
   title
 })

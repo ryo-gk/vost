@@ -22,7 +22,7 @@ const tags = createTags(post?.tags ?? [])
     <div class="tags">
       <VostTags :tags="tags" />
     </div>
-    <div class="body" v-html="post?.body" />
+    <div class="body markdown-content" v-html="post?.body" />
   </div>
 </template>
 
@@ -59,23 +59,5 @@ const tags = createTags(post?.tags ?? [])
   font-size: var(--font-size--detail-content_body);
   font-weight: 300;
   font-family: var(--font-family--content);
-
-  :deep(h1) {
-    margin: 16px 0 0;
-    font-size: var(--font-size--detail-content_h1);
-    font-weight: 700;
-    font-family: var(--font-family--post-title);
-  }
-
-  :deep(h2) {
-    margin: 16px 0 0;
-    font-size: var(--font-size--detail-content_h2);
-    font-weight: 700;
-    font-family: var(--font-family--post-title);
-  }
-
-  @media (min-width: 768px) {
-
-  }
 }
 </style>

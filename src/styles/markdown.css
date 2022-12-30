@@ -1,0 +1,63 @@
+.markdown-content h1 {
+  margin: 16px 0 8px;
+  font-size: var(--font-size--detail-content_h1);
+  font-weight: 700;
+  font-family: var(--font-family--post-title);
+}
+
+.markdown-content h2 {
+  margin: 16px 0 8px;
+  font-size: var(--font-size--detail-content_h2);
+  font-weight: 700;
+  font-family: var(--font-family--post-title);
+}
+
+.markdown-content h3 {
+  margin: 16px 0 0;
+  font-size: var(--font-size--detail-content_h3);
+  font-weight: 600;
+  font-family: var(--font-family--post-title);
+}
+
+.markdown-content h4 {
+  margin: 16px 0 0;
+  font-size: var(--font-size--detail-content_h4);
+  font-weight: 500;
+  font-family: var(--font-family--post-title);
+}
+
+.markdown-content a {
+  text-decoration: underline;
+}
+
+.markdown-content li {
+  list-style: inside;
+}
+
+.markdown-content pre {
+  margin-top: 8px;
+}
+
+.markdown-content strong {
+  font-weight: 700;
+}
+
+.markdown-content blockquote {
+  position: relative;
+  margin: 8px 0;
+  padding-left: 10px;
+  border-left: 3px solid var(--color-accent--lighten-3);
+}
+
+.markdown-content blockquote:before {
+  position: absolute;
+  content: '\f10d';
+  font-family: 'FontAwesome';
+  font-size:  16px;
+  color: var(--color-accent--lighten-3);
+}
+
+.markdown-content blockquote p {
+  position: relative;
+  padding-left: 30px;
+}

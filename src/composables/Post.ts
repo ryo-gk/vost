@@ -1,5 +1,7 @@
 import { data } from 'virtual:vite-plugin-md-data'
 import { useRouter } from 'vue-router'
+import { load } from 'cheerio'
+import hljs from 'highlight.js'
 
 export type FilterBy = (data: Post) => boolean
 
@@ -11,7 +13,18 @@ export interface Post extends Omit<Frontmatter, 'publishedAt'> {
 }
 
 export function getPost(slug: string): Post | null {
-  return getPosts().find(p => p.slug === slug) ?? null
+  const post = getPosts()
+    .find(p => p.slug === slug)
+    ?? null
+
+  if (!post) {
+    return null
+  }
+
+  return {
+    ...post,
+    body: highlight(post.body)
+  } as Post
 }
 
 export function getPosts() {
@@ -61,4 +74,16 @@ export function parseToText(text: string) {
 
 export function retrieve(text: string, length: number, tailText?: string) {
   return text.substring(0, length) + (tailText ?? '')
+}
+
+export function highlight (body: any) {
+  if (!body) { return '' }
+
+  const t = load(body)
+  t('pre code').each((_, elm) => {
+    const result = hljs.highlightAuto(t(elm).text())
+    t(elm).html(result.value)
+    t(elm).addClass('hljs')
+  })
+  return t.html()
 }
