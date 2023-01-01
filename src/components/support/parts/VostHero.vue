@@ -68,6 +68,8 @@ const image = computed(() => (`url(${props.backgroundImage})`))
   font-weight: 600;
   font-family: var(--font-family--post-title);
   color: var(--hero-color-accent);
+  background-color: rgba(255,255,255,0.6);
+  padding: 4px 16px;
 
   @media (min-width: 768px) {
     line-height: 60px;
@@ -82,6 +84,9 @@ const image = computed(() => (`url(${props.backgroundImage})`))
   color: var(--hero-color-accent);
   font-size: 20px;
   font-family: var(--font-family--content);
+  background-color: rgba(255,255,255,0.6);
+  padding: 4px 16px;
+  margin: 16px 0;
 
   @media (min-width: 512px) {
     line-height: 32px;

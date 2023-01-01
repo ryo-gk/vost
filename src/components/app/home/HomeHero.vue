@@ -19,7 +19,7 @@ function moveToPost() {
   <VostHero
     :title="featuredPost.title"
     :description="retrieveText(featuredPost)"
-    background-image="/img/hero-image_nick-brunner.jpg"
+    background-image="/img/hero-image_joanna-kosinska.jpg"
     :on-click-button="moveToPost"
   />
 </template>
