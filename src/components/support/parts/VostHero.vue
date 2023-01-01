@@ -46,7 +46,7 @@ const image = computed(() => (`url(${props.backgroundImage})`))
   height: 100%;
   padding: 0 32px;
 
-  background-image: v-bind(image);
+  background: v-bind(image);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;

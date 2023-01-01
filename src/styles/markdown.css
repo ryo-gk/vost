@@ -42,6 +42,10 @@
   font-weight: 700;
 }
 
+.markdown-content em {
+  font-style: italic;
+}
+
 .markdown-content blockquote {
   position: relative;
   margin: 8px 0;
