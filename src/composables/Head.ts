@@ -1,4 +1,6 @@
+import { reactive } from 'vue'
 import { HeadObject } from '@vueuse/head'
+import { config } from 'virtual:config'
 
 export type OGPType = 'website' | 'blog' | 'article'
 
@@ -9,6 +11,15 @@ export interface OGPOptions {
   url: string
   image?: string
   type: OGPType
+}
+
+export function useFavicon() {
+  return reactive({
+    link: [
+      { rel: 'icon', href: config.favicon, type: 'image/png' },
+      { rel: 'icon', href: config.favicon, type: 'image/svg+xml' }
+    ]
+  })
 }
 
 export function useOGP(options: OGPOptions): HeadObject {
@@ -27,5 +38,5 @@ export function useOGP(options: OGPOptions): HeadObject {
     }
   }
 
-  return head
+  return reactive(head)
 }

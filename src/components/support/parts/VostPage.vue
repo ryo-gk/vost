@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { config } from 'virtual:config'
-import { useOGP } from '@/composables/Head'
+import { useFavicon, useOGP } from '@/composables/Head'
 import { useHead } from '@vueuse/head'
 
 const props = defineProps<{
@@ -16,6 +16,8 @@ const route = useRoute()
 
 const title = computed(() => props.title ? `${props.title} | ${config.name}` : config.name)
 
+const favicon = useFavicon()
+
 const ogp = useOGP({
   siteName: config.name,
   title: title.value,
@@ -25,8 +27,8 @@ const ogp = useOGP({
   type: props.type ?? 'blog'
 })
 
-
 useHead({
+  link: favicon.link,
   ...ogp,
   title
 })
