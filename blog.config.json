@@ -1,5 +1,6 @@
 {
   "name": "Vost",
+  "baseUrl": "https://vost-red.vercel.app",
   "postPath": "./posts",
   "description": "The blog created by Vost.",
   "copyright": "ryo_gk"

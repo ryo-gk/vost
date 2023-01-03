@@ -58,10 +58,11 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 
 .main {
   max-width: 800px;
-  padding-top: 80px;
+  padding-top: 64px;
 }
 
 .title {
+  padding: 16px 16px 0;
   line-height: 36px;
   letter-spacing: 0;
   font-size: 36px;
@@ -69,7 +70,6 @@ const image = computed(() => (`url(${props.backgroundImage})`))
   font-family: var(--font-family--post-title);
   color: var(--hero-color-accent);
   background-color: rgba(255,255,255,0.6);
-  padding: 4px 16px;
 
   @media (min-width: 768px) {
     line-height: 60px;
@@ -78,15 +78,13 @@ const image = computed(() => (`url(${props.backgroundImage})`))
 }
 
 .description {
-  padding-top: 12px;
-  padding-bottom: 16px;
   line-height: 20px;
   color: var(--hero-color-accent);
   font-size: 20px;
   font-family: var(--font-family--content);
   background-color: rgba(255,255,255,0.6);
-  padding: 4px 16px;
-  margin: 16px 0;
+  padding: 16px 16px;
+  margin-bottom: 16px;
 
   @media (min-width: 512px) {
     line-height: 32px;
