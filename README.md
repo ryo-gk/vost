@@ -16,7 +16,17 @@ Create a repository from [here](https://github.com/ryo-gk/vost/generate)
   - `/src/styles/variables.css`
 
 ### Write posts
-You can write markdown post on `/posts`.
+You can write markdown posts on /posts.
+
+Vost provide a command to generate a markdown file for a new post.
+
+```shell
+> pnpm run create post -n {file_name}
+```
+
+Under the food, Vost uses[markdown-creator](https://github.com/ryo-gk/markdown-creator).
+
+So more details, you can see the repository.
 
 ### Development
 Run the below, and open http://localhost:5173
